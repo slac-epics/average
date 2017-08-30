@@ -1,0 +1,125 @@
+recordtype(average) {
+	include "dbCommon.dbd" 
+	field(INP,DBF_DOUBLE) {
+		prompt("Input")
+		promptgroup(GUI_INPUTS)
+		interest(3)
+		pp(TRUE)
+	}
+	field(NAVG,DBF_SHORT) {
+		prompt("No of Points to Average Over")
+		special(SPC_NOMOD)
+		interest(3)
+	}
+	field(DBUF,DBF_NOACCESS) {
+		prompt("Data Buffer")
+		special(SPC_DBADDR)
+		interest(3)
+		extra("double *dbuf")
+	}
+	field(VAL,DBF_DOUBLE) {
+		prompt("Averaged Value")
+                promptgroup(GUI_OUTPUT)
+		asl(ASL0)
+	}
+	field(SUM,DBF_DOUBLE) {
+		prompt("Current Sum")
+                promptgroup(GUI_OUTPUT)
+		special(SPC_NOMOD)
+		asl(ASL0)
+	}
+	field(IDX,DBF_SHORT) {
+		prompt("Index between 0 and NAVG-1")
+                promptgroup(GUI_OUTPUT)
+		special(SPC_NOMOD)
+		asl(ASL0)
+	}
+	field(PREC,DBF_SHORT) {
+		prompt("Display Precision")
+		promptgroup(GUI_DISPLAY)
+		interest(1)
+	}
+	field(HIHI,DBF_DOUBLE) {
+		prompt("Hihi Alarm Limit")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+	}
+	field(LOLO,DBF_DOUBLE) {
+		prompt("Lolo Alarm Limit")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+	}
+	field(HIGH,DBF_DOUBLE) {
+		prompt("High Alarm Limit")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+	}
+	field(LOW,DBF_DOUBLE) {
+		prompt("Low Alarm Limit")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+	}
+	field(HHSV,DBF_MENU) {
+		prompt("Hihi Severity")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+		menu(menuAlarmSevr)
+	}
+	field(LLSV,DBF_MENU) {
+		prompt("Lolo Severity")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+		menu(menuAlarmSevr)
+	}
+	field(HSV,DBF_MENU) {
+		prompt("High Severity")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+		menu(menuAlarmSevr)
+	}
+	field(LSV,DBF_MENU) {
+		prompt("Low Severity")
+		promptgroup(GUI_ALARMS)
+		pp(TRUE)
+		interest(1)
+		menu(menuAlarmSevr)
+	}
+	field(HYST,DBF_DOUBLE) {
+		prompt("Alarm Deadband")
+		promptgroup(GUI_ALARMS)
+		interest(1)
+	}
+	field(ADEL,DBF_DOUBLE) {
+		prompt("Archive Deadband")
+		promptgroup(GUI_DISPLAY)
+		interest(1)
+	}
+	field(MDEL,DBF_DOUBLE) {
+		prompt("Monitor Deadband")
+		promptgroup(GUI_DISPLAY)
+		interest(1)
+	}
+	field(LALM,DBF_DOUBLE) {
+		prompt("Last Value Alarmed")
+		special(SPC_NOMOD)
+		interest(3)
+	}
+	field(ALST,DBF_DOUBLE) {
+		prompt("Last Value Archived")
+		special(SPC_NOMOD)
+		interest(3)
+	}
+	field(MLST,DBF_DOUBLE) {
+		prompt("Last Val Monitored")
+		special(SPC_NOMOD)
+		interest(3)
+	}
+}
+

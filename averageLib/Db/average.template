@@ -1,0 +1,7 @@
+record(average, $(NAME))
+{
+  field(DESC, "Moving window average")
+  field(NAVG, "$(NAVG)")
+  field(SCAN, "Passive")
+}
+

@@ -1,0 +1,25 @@
+#==============================================================
+#
+#  Name: README
+#
+#  Rem:  This is a driver for the Xycom 2445 32-channel optically
+#        isolated digital output Industry Pack (IP) with
+#        interrupts.
+#
+#  Auth: dd-mmm-yyyy, Andy Foster        (USERNAME)
+#  Rev:  dd-mmm-yyyy, Reviewer's Name    (USERNAME)
+#--------------------------------------------------------------
+#  Mod:
+#        dd-mmm-yyyy, First Lastname     (USERNAME):
+#          comment
+#
+#==============================================================
+#
+EPICS Verions:
+--------------
+This driver has currently been built and tested at SLAC with EPICS 3.14.8.2.
+EPICS OSI support has been added to this driver by Till Strauman at SLAC.
+
+Operating System:
+-------------------
+This driver has only been tested under RTEMS since osi support has been added.

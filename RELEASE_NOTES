@@ -1,0 +1,8 @@
+#
+# RELEASE_NOTES
+#
+R0.0.2	2017-08-29 Bruce Hill
+	Updated for git workflow
+
+R0.0.1	2011-10-27 Dehong Zhang
+	Initial snapshot of average module from /reg/neh/home/dhzhang/Epics/module_average-R0.0.1
